@@ -1,0 +1,23 @@
+<div id="xp-data">    
+<!-- Dynamic content: iterates over every dictionary in job list-->
+    {% for job in jobs %}
+    <div style='margin-bottom: 1cm;' class="row align-items-center">
+        <div class="col">
+            <h4 style="color: rgb(125, 125, 125);">
+                {{job['title']}}
+            </h4>
+            <div>
+                <b>Company:</b> <a href={{job['company_url']}}>{{job['company_name']}}</a>
+            </div>
+            <div>
+                <b>Period:</b> {{job['period_description']}}
+            </div>
+        </div>
+        <div class="col">
+        </div>
+        <div class="col" style="text-align: center;">
+            <button type="button" class="btn btn-outline-primary">View Details</button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
