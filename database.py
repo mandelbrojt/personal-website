@@ -29,3 +29,15 @@ def load_jobs_from_db():
           # Convert text result into dictionary and append it to jobs list
           jobs.append(dict(row))
   return jobs
+
+# Create a function to load a job depending on its id
+def load_specific_job(id):
+    # Connect to the database
+    with engine.connect(id) as conn:
+        # Query database with 
+        result = conn.execute(text("select * from jobs where id = :val"), val=id)
+        rows = result.all()
+        if len(rows) == 0:
+            return None
+        else:
+            return dict(rows[0])
