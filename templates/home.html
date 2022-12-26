@@ -8,11 +8,12 @@
         <title>My Career</title>
     </head>
     <body>
+        {% include 'header.html' %}
         <div id="main-page" class="container">
             <div id="presentation" class="text-center">
                 <h1 style="margin-bottom: 1cm; margin-top: 1cm; color: rgb(1, 53, 171);">Luis Moreno</h1>
                 <img src="/static/my-avatar.png" style="display: block; margin: 0 auto; border-radius: 50%;" width=200 height=200>
-                <p style="color: rgb(76, 189, 214); margin-top: 1cm;">Financial Manager | Data Science Student | Entrepreneur</p>
+                <p style="color: rgb(76, 189, 214); margin-top: 1cm;">Financial Manager | Aspiring Data Scientist</p>
             </div>
             <div id="about-me" style="margin-bottom: 1cm;">
                 <h2 style="color: rgb(1, 53, 171); text-align: center; margin-bottom: 1cm;">About Me</h2>
@@ -26,7 +27,7 @@
                 {% include 'jobs.html' %}
             </div>
             <div style="text-align: center; margin-bottom: 2cm;">
-                <button type="button" class="btn btn-primary">Contact</button>
+                <a href="https://calendly.com/luigi-moreno/letsmeet" type="button" class="btn btn-primary">Schedule a Meeting</a>
             </div>
             <!-- Use footer.html file for the home page footer-->
             {% include 'footer.html' %}
